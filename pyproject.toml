@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "zyxel-ex5601-api"
+version = "0.1.0"
+description = "Client and CLI for the web API of the Zyxel EX5601-T1 router (Odido T-56)"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.9"
+dependencies = ["requests", "cryptography"]
+keywords = ["zyxel", "ex5601", "router", "odido", "api"]
+
+[project.scripts]
+zyxel-api = "zyxel_api:cli"
+
+[tool.setuptools]
+py-modules = ["zyxel_api"]
